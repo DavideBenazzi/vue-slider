@@ -9,20 +9,22 @@
   </head>
   <body>
     <div id="app">
-      <div class="prev" @click='prevPhoto'>
-        <i class="fas fa-angle-left"></i>
-      </div>
-      <div class="image">
-        <img :src="photo[indexPhoto]" alt="image">
-      </div>
-      <div class="next" @click='nextPhoto'>
-        <i class="fas fa-angle-right"></i>
-      </div>
-      <div class="nav">
-        <i class="fas fa-circle active"></i>
-        <i class="fas fa-circle"></i>
-        <i class="fas fa-circle"></i>
-        <i class="fas fa-circle"></i>
+      <div class="container">
+        <div class="prev" @click='prevPhoto'>
+          <i class="fas fa-angle-left"></i>
+        </div>
+        <div class="image">
+          <img :src="photo[indexPhoto]" alt="image">
+        </div>
+        <div class="next" @click='nextPhoto'>
+          <i class="fas fa-angle-right"></i>
+        </div>
+        <div class="nav">
+          <i v-for='(photo , index) in photo'
+          class="fas fa-circle"
+          :class="index == indexPhoto ? 'active' : ''"
+          @click='choosePhoto(index)'></i>
+        </div>
       </div>
     </div>
     <!-- JAVASCRIPT -->

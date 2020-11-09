@@ -4,14 +4,13 @@
   box-sizing: border-box;
 }
 
-.image {
-  height: 600px;
+.container {
   position: relative;
 }
 
 .image img {
   width: 100%;
-  height: 100%;
+  height: 600px;
   object-fit: cover;
 }
 
@@ -20,7 +19,7 @@
   height: 50px;
   width: 50px;
   line-height: 50px;
-  color: #fff;
+  color: rgba(255, 255, 255, 0.7);
   font-size: 30px;
   background: rgba(0, 0, 0, 0.7);
   border-radius: 50%;
@@ -29,6 +28,13 @@
   top: 50%;
   transform: translateY(-50%);
   z-index: 10;
+  transition: color , 0.4s;
+}
+
+.prev:hover,
+.next:hover {
+  color: #fff;
+  cursor: pointer;
 }
 
 .prev {
@@ -55,8 +61,13 @@
 }
 
 .nav i {
-  color: #fff;
+  color: rgba(255, 255, 255, 0.7);
   cursor: pointer;
+  transition: color , 0.4s;
+}
+
+.nav i:hover {
+  color: #fff;
 }
 
 .nav i.active {

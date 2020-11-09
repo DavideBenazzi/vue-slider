@@ -23,5 +23,8 @@ const app = new Vue ({
         this.indexPhoto = 0;
       }
     },
+    choosePhoto(index) {
+      this.indexPhoto = index;
+    },
   },
 });
