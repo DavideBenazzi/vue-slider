@@ -3,3 +3,62 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+.image {
+  height: 600px;
+  position: relative;
+}
+
+.image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.prev,
+.next {
+  height: 50px;
+  width: 50px;
+  line-height: 50px;
+  color: #fff;
+  font-size: 30px;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 50%;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+.prev {
+  left: 20px;
+}
+
+.next {
+  right: 20px;
+}
+
+.nav {
+  height: 50px;
+  width: 200px;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+  border-radius: 25px;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.nav i {
+  color: #fff;
+  cursor: pointer;
+}
+
+.nav i.active {
+  color: dodgerblue;
+}
